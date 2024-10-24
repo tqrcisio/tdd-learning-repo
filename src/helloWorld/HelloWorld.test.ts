@@ -1,5 +1,3 @@
-import { describe } from 'node:test';
-import { HelloWorld } from './HelloWorld';
 import { IHelloWorld } from '@/types/HelloWorld';
 
 const makeHelloWorld = (): IHelloWorld => {
@@ -8,7 +6,7 @@ const makeHelloWorld = (): IHelloWorld => {
       return 'Hello, ' + (name || 'world') + '!';
     }
   }
-  return new HelloWorld();
+  return new HelloWorldStub();
 };
 
 const makeSut = (): { sut: IHelloWorld } => {
@@ -29,4 +27,3 @@ describe('Teste da Classe HelloWorld', () => {
     expect(sayHello).toBe('Hello, world!');
   });
 });
-

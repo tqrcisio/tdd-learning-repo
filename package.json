@@ -7,11 +7,14 @@
     "start": "node build/index.js",
     "build": "tsc",
     "dev": "ts-node-dev src/index.ts",
-    "lint": "eslint . --ext .ts",
+    "eslint:check": "eslint \"{src,apps,libs,test}/**/*.ts\"",
+    "eslint:fix": "pnpm eslint:check --fix",
+    "prettier:check": "prettier --check './**/*.{ts,js,json,*rc}'",
+    "prettier:write": "prettier --write './**/*.{ts,js,json,*rc}'",
+    "lint": "npm run eslint:check && npm run eslint:fix",
     "format": "prettier --write .",
     "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:watch": "jest --watch"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +27,8 @@
     "prettier": "^3.3.3",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "typescript-eslint": "7.13.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
