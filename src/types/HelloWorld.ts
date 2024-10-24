@@ -1,3 +1,3 @@
 export interface IHelloWorld {
-  sayHello(name: string): string;
+  sayHello(name?: string): string;
 }

@@ -2,4 +2,4 @@ import { HelloWorld } from './helloWorld/HelloWorld';
 
 const helloWorld = new HelloWorld();
 
-helloWorld.sayHello();
+console.log(helloWorld.sayHello());
