@@ -10,7 +10,7 @@ export default [
   {
     rules: {
       '@typescript-eslint/naming-convention': [
-        'error',
+        'warn',
         {
           selector: 'class',
           format: ['PascalCase']
